@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'yeseva': ['Yeseva One', 'serif'],
+				'inter': ['Inter', 'sans-serif']
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Launch Brand Colors
+				launch: {
+					'beige-light': 'hsl(var(--launch-beige-light))',
+					'green-gray': 'hsl(var(--launch-green-gray))',
+					'wine-dark': 'hsl(var(--launch-wine-dark))',
+					'red-dark': 'hsl(var(--launch-red-dark))',
+					'beige-yellow': 'hsl(var(--launch-beige-yellow))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
 				}
 			},
 			borderRadius: {
