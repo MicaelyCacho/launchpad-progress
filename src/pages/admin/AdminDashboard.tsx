@@ -32,8 +32,7 @@ export const AdminDashboard: React.FC = () => {
   const systemStats = [
     { metric: 'Total de Usuários', value: 156, change: '+12%', icon: Users },
     { metric: 'Salas Ativas', value: 24, change: '+3', icon: School },
-    { metric: 'Redações Corrigidas', value: 342, change: '+23%', icon: FileText },
-    { metric: 'Taxa de Aprovação', value: '87%', change: '+5%', icon: TrendingUp }
+    { metric: 'Redações Corrigidas', value: 342, change: '+23%', icon: FileText }
   ];
 
   const allRooms = [
@@ -41,7 +40,7 @@ export const AdminDashboard: React.FC = () => {
       nome: 'Redação ENEM 2024 - Turma A',
       professor: 'Prof. Maria Santos',
       alunos: 25,
-      mediaGeral: 85.2,
+      mediaGeral: 852,
       status: 'ativa',
       ultimaAtividade: '2024-08-05'
     },
@@ -49,7 +48,7 @@ export const AdminDashboard: React.FC = () => {
       nome: 'Literatura Brasileira',
       professor: 'Prof. João Silva',
       alunos: 30,
-      mediaGeral: 78.5,
+      mediaGeral: 785,
       status: 'ativa',
       ultimaAtividade: '2024-08-04'
     },
@@ -57,7 +56,7 @@ export const AdminDashboard: React.FC = () => {
       nome: 'Preparatório Vestibular',
       professor: 'Prof. Ana Costa',
       alunos: 18,
-      mediaGeral: 82.1,
+      mediaGeral: 821,
       status: 'pausa',
       ultimaAtividade: '2024-08-01'
     },
@@ -65,7 +64,7 @@ export const AdminDashboard: React.FC = () => {
       nome: 'Redação ENEM 2024 - Turma B',
       professor: 'Prof. Maria Santos',
       alunos: 22,
-      mediaGeral: 79.8,
+      mediaGeral: 798,
       status: 'ativa',
       ultimaAtividade: '2024-08-05'
     },
@@ -73,18 +72,18 @@ export const AdminDashboard: React.FC = () => {
       nome: 'Técnicas de Argumentação',
       professor: 'Prof. Carlos Lima',
       alunos: 28,
-      mediaGeral: 83.4,
+      mediaGeral: 834,
       status: 'ativa',
       ultimaAtividade: '2024-08-03'
     }
   ];
 
   const gradeDistribution = [
-    { faixa: '90-100', quantidade: 45, cor: 'hsl(var(--launch-green-gray))' },
-    { faixa: '80-89', quantidade: 78, cor: 'hsl(var(--launch-wine-dark))' },
-    { faixa: '70-79', quantidade: 65, cor: 'hsl(var(--launch-beige-yellow))' },
-    { faixa: '60-69', quantidade: 32, cor: 'hsl(var(--launch-red-dark))' },
-    { faixa: '0-59', quantidade: 12, cor: 'hsl(var(--launch-beige-light))' }
+    { faixa: '900-1000', quantidade: 45, cor: 'hsl(var(--launch-green-gray))' },
+    { faixa: '800-899', quantidade: 78, cor: 'hsl(var(--launch-wine-dark))' },
+    { faixa: '700-799', quantidade: 65, cor: 'hsl(var(--launch-beige-yellow))' },
+    { faixa: '600-699', quantidade: 32, cor: 'hsl(var(--launch-red-dark))' },
+    { faixa: '0-599', quantidade: 12, cor: 'hsl(var(--launch-beige-light))' }
   ];
 
   const monthlyActivity = [
@@ -96,10 +95,10 @@ export const AdminDashboard: React.FC = () => {
   ];
 
   const teacherPerformance = [
-    { professor: 'Prof. Maria Santos', turmas: 2, alunos: 47, mediaGeral: 82.5, redacoesCorrigidas: 142 },
-    { professor: 'Prof. João Silva', turmas: 1, alunos: 30, mediaGeral: 78.5, redacoesCorrigidas: 95 },
-    { professor: 'Prof. Ana Costa', turmas: 1, alunos: 18, mediaGeral: 82.1, redacoesCorrigidas: 67 },
-    { professor: 'Prof. Carlos Lima', turmas: 1, alunos: 28, mediaGeral: 83.4, redacoesCorrigidas: 89 }
+    { professor: 'Prof. Maria Santos', turmas: 2, alunos: 47, mediaGeral: 825, redacoesCorrigidas: 142 },
+    { professor: 'Prof. João Silva', turmas: 1, alunos: 30, mediaGeral: 785, redacoesCorrigidas: 95 },
+    { professor: 'Prof. Ana Costa', turmas: 1, alunos: 18, mediaGeral: 821, redacoesCorrigidas: 67 },
+    { professor: 'Prof. Carlos Lima', turmas: 1, alunos: 28, mediaGeral: 834, redacoesCorrigidas: 89 }
   ];
 
   const getStatusColor = (status: string) => {
@@ -132,7 +131,7 @@ export const AdminDashboard: React.FC = () => {
         </div>
 
         {/* Cards de Estatísticas Gerais */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {systemStats.map((stat, index) => {
             const IconComponent = stat.icon;
             return (
